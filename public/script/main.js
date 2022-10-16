@@ -1113,28 +1113,32 @@ var __decorate = this && this.__decorate || function(decorators, target, key, de
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 let MyElement = class MyElement extends s6 {
-    status = "";
+    constructor(){
+        super();
+        this.status = "Click me";
+    }
+    statusChange(e) {
+        console.log("you clikced teh button");
+        console.log(`my-element was clicked, the status will be changed next.  current status: [${this.status}]`);
+        this.status = "Clicked!!!";
+        console.log(`my-element's status has been changed.  current status: [${this.status}]`);
+    }
     render() {
-        return $1` <p>Basic Lit behavior works.</p>
-      <p>Click this text to test reactive properties in external events.</p>
-      <p>
-        Once clicked, this text -> [<b>${this.status}</b>] will be updated.
-      </p>`;
+        return $1` <p>Basic Lit behavior works?</p>
+      <p>Click the button to test reactive properties in external events.</p>
+      <button @click="${this.statusChange}">
+        ${this.status}
+      </button>`;
     }
 };
 __decorate([
-    e7()
+    e7({
+        type: String
+    })
 ], MyElement.prototype, "status", void 0);
 MyElement = __decorate([
     e6("my-element")
 ], MyElement);
-const ele = document.querySelector("my-element");
-ele.addEventListener("click", ()=>{
-    console.log(`my-element was clicked, the status will be changed next.  current status: [${ele.status}]`);
-    ele.status = "Clicked!!!";
-    console.log(`my-element's status has been changed.  current status: [${ele.status}]`);
-});
-ele.status = "waiting ...";
 var __decorate1 = this && this.__decorate || function(decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
