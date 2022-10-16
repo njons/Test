@@ -1,4 +1,4 @@
-import {router} from "../../playground/deno-test/src/router.ts";
+import {router} from "./router.ts";
 
 // Start listening on port 8080 of localhost.
 const server = Deno.listen({port: 8080});
