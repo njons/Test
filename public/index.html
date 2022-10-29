@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Deno . Deeno . Deeeno</title>
-    <link rel="stylesheet" href="./assets/index.css" />
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,500;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Content from separate index.html file......</h1>
-    <button-test></button-test>
-    <greeting-message name="hello"></greeting-message>
-    <my-element></my-element>
+    <header class="banner">
+      <p><a href="">@njons</a></p>
+      <h1>Nathalie Jonsson</h1>
+    </header>
+    <section>
+      <h1>Content from separate index.html file......</h1>
+      <button-element></button-element>
+      <greeting-message name="hello"></greeting-message>
+      <my-element></my-element>
+    </section>
     <script type="module" src="./script/main.js"></script>
   </body>
 </html>

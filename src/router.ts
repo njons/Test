@@ -1,4 +1,4 @@
-import {lookup} from "../deps.ts";
+import { lookup } from "../deps.ts";
 import setFilePath from "./utils/setFilePath.ts";
 
 export async function router(conn: Deno.Conn) {
@@ -18,7 +18,7 @@ export async function router(conn: Deno.Conn) {
       // set res.body with html
       body = new TextEncoder().encode(html);
     } catch (err) {
-      const notFoundResponse = new Response("404 Not Found", {status: 404});
+      const notFoundResponse = new Response("404 Not Found", { status: 404 });
       await requestEvent.respondWith(notFoundResponse);
       return;
     }

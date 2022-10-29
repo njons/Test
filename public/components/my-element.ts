@@ -17,8 +17,10 @@ export class MyElement extends LitElement {
     this.status = "Clicked!!!";
   }
   render() {
-    return html` <p>Basic Lit behavior works?</p>
-      <p>Click the button to test reactive properties in external events.</p>
+    return html` <p>
+        Click the button to test reactive properties in external events.
+      </p>
+      <button-test></button-test>
       <button @click="${this.statusChange}">
         ${this.status}
       </button>` as unknown as symbol;

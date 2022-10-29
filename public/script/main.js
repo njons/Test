@@ -1118,14 +1118,13 @@ let MyElement = class MyElement extends s6 {
         this.status = "Click me";
     }
     statusChange(e) {
-        console.log("you clikced teh button");
-        console.log(`my-element was clicked, the status will be changed next.  current status: [${this.status}]`);
         this.status = "Clicked!!!";
-        console.log(`my-element's status has been changed.  current status: [${this.status}]`);
     }
     render() {
-        return $1` <p>Basic Lit behavior works?</p>
-      <p>Click the button to test reactive properties in external events.</p>
+        return $1` <p>
+        Click the button to test reactive properties in external events.
+      </p>
+      <button-test></button-test>
       <button @click="${this.statusChange}">
         ${this.status}
       </button>`;
@@ -1145,17 +1144,15 @@ var __decorate1 = this && this.__decorate || function(decorators, target, key, d
     else for(var i = decorators.length - 1; i >= 0; i--)if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-let ButtonTest = class ButtonTest extends s6 {
+let ButtonElement = class ButtonElement extends s6 {
     constructor(){
         super();
         this.count = 0;
     }
     _increment(e) {
-        console.log("this.count increment", this.count);
         this.count++;
     }
     render() {
-        console.log("this.count render", this.count);
         return $1`
       <button @click="${this._increment}">Click Me!</button>
       <p>Click count: ${this.count}</p>
@@ -1166,7 +1163,7 @@ __decorate1([
     e7({
         type: Number
     })
-], ButtonTest.prototype, "count", void 0);
-ButtonTest = __decorate1([
-    e6("button-test")
-], ButtonTest);
+], ButtonElement.prototype, "count", void 0);
+ButtonElement = __decorate1([
+    e6("button-element")
+], ButtonElement);

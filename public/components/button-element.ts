@@ -4,8 +4,8 @@ import {
   property,
 } from "https://cdn.skypack.dev/lit/decorators";
 
-@customElement("button-test")
-export class ButtonTest extends LitElement {
+@customElement("button-element")
+export class ButtonElement extends LitElement {
   @property({ type: Number })
   declare count;
   constructor() {
